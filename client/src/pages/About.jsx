@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function About() {
   return (
-    <div className='px-4 py-12 max-w-2xl mx-auto'>
-      <h1 className='text-3xl font-bold mb-4 text-slate-800'>About Project</h1>
+    <div className='max-w-2xl px-4 py-12 mx-auto'>
+      <h1 className='mb-4 text-3xl font-bold text-slate-800'>About Project</h1>
       <p className='mb-4 text-slate-700'>
         This is a <strong>full-stack authentication application</strong> built with the <strong>MERN stack</strong> (MongoDB, Express, React, Node.js). It incorporates various modern technologies and best practices to provide a <strong>secure</strong> and <strong>efficient</strong> user experience.
       </p>
@@ -27,6 +27,9 @@ export default function About() {
       </p>
       <p className='mb-4 text-slate-700'>
         <strong>CRUD operations</strong> (Create, Read, Update, Delete) are supported using <strong>MongoDB</strong>, enabling effective interaction with the database to manage user data. This ensures seamless data management and enhances the scalability of the application.
+      </p>
+      <p className='mb-4 text-slate-700'>
+        In addition to the authentication features, the application also includes a <strong>PayPal payment system</strong> to enable users to checkout projects and pay a nominal fee of $1 using PayPal. This integration provides a seamless and secure payment experience for users, allowing them to access premium features or content.
       </p>
       <p className='mb-4 text-slate-700'>
         Finally, the application is deployed using <strong>Render</strong>, allowing for easy and cost-effective deployment of the full-stack authentication app. Users can share the deployed application with others or showcase it in their portfolio to demonstrate their skills and accomplishments.
