@@ -32,6 +32,9 @@ export default function About() {
         In addition to the authentication features, the application also includes a <strong>PayPal payment system</strong> to enable users to checkout projects and pay a nominal fee of $1 using PayPal. This integration provides a seamless and secure payment experience for users, allowing them to access premium features or content.
       </p>
       <p className='mb-4 text-slate-700'>
+        Users can initiate the checkout process by selecting the desired project or feature and proceeding to the payment page. Once on the payment page, they will be prompted to log in to their PayPal account or enter payment details to complete the transaction securely. Upon successful payment, users will gain access to the requested content or feature, enhancing their overall experience with the application.
+      </p>
+      <p className='mb-4 text-slate-700'>
         Finally, the application is deployed using <strong>Render</strong>, allowing for easy and cost-effective deployment of the full-stack authentication app. Users can share the deployed application with others or showcase it in their portfolio to demonstrate their skills and accomplishments.
       </p>
       <p className='mb-4 text-slate-700'>
