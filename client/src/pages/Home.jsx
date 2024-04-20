@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Paypal from './Paypal';
 
 export default function Home() {
+  const [checkout, setCheckout] = useState(false);
+  const product = {
+    name: "Earbuds",
+    price: 1, 
+    description: "Bluetoothe earbuds",
+    image: "data:image/jpeg;base64,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" 
+  };
+
   return (
-    <div className='px-4 py-12 max-w-2xl mx-auto'>
-      <h1 className='text-3xl font-bold  mb-4 text-slate-800'>
-        Welcome to my Auth App!
-      </h1>
-      <p className='mb-4 text-slate-700'>
-        This is a full-stack web application built with the MERN (MongoDB,
-        Express, React, Node.js) stack. It includes authentication features that
-        allow users to sign up, log in, and log out, and provides access to
-        protected routes only for authenticated users.
-      </p>
-      <p className='mb-4 text-slate-700'>
-        The front-end of the application is built with React and uses React
-        Router for client-side routing. The back-end is built with Node.js and
-        Express, and uses MongoDB as the database. Authentication is implemented
-        using JSON Web Tokens (JWT).
-      </p>
-      <p className='mb-4 text-slate-700'>
-        This application is intended as a starting point for building full-stack
-        web applications with authentication using the MERN stack.
-      </p>
+    <div className='max-w-2xl px-4 py-12 mx-auto'>
+      {checkout ? (
+        <Paypal product={product} />
+      ) : (
+        <div>
+          <h2>{product.name}</h2>
+          <p>${product.price}</p>
+          <img src={product.image} alt={product.name} />
+          <p>{product.description}</p>
+          <button onClick={() => setCheckout(true)}>Checkout</button>
+        </div>
+      )}
     </div>
   );
 }
